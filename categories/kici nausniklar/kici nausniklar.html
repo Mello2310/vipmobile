@@ -3,8 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Товары</title>
-
+    <title>VIP MOBILE</title>
     <style>
         body {
             font-family: Helvetica, sans-serif;
@@ -12,13 +11,10 @@
             padding: 0;
             box-sizing: border-box;
         }
-
         h1 {
             text-align: center;
             font-size: 24px;
-            margin-bottom: 20px;
         }
-
         #search-bar {
             display: block;
             margin: 10px auto;
@@ -29,92 +25,82 @@
             border-radius: 5px;
             font-size: 16px;
         }
-
-        .products {
+        .categories {
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
             gap: 10px;
+            margin-top: 20px;
         }
-
-        .product {
+        .category {
             text-align: center;
             border: 1px solid #ddd;
             padding: 10px;
             width: 100%;
-            max-width: 200px;
+            max-width: calc(33.33% - 20px); /* Разделение на 3 категории в ряд */
             box-sizing: border-box;
         }
-
-        .product img {
+        .category img {
             max-width: 100%;
             height: auto;
             border-radius: 8px;
         }
-
-        .product-name {
-            font-size: 16px;
+        .category a {
+            text-decoration: none;
+            color: blue;
+            font-size: 14px;
+            font-weight: bold;
+            display: block;
             margin-top: 10px;
         }
-
-        .product-price {
-            font-size: 14px;
-            color: green;
-            margin-top: 5px;
-        }
-
-        /* Adjustments for smaller screens */
+        /* Adjustments for mobile screens */
         @media (max-width: 600px) {
-            .product {
-                max-width: 150px;
-            }
             h1 {
                 font-size: 20px;
+            }
+            .category {
+                width: 100%;
+                max-width: calc(33.33% - 10px); /* Остаётся 3 в ряд для мелких экранов */
             }
         }
     </style>
 </head>
 <body>
-    <h1>Kici Nausniklar</h1>
+    <h1>VIP MOBILE</h1>
 
     <!-- Search Bar -->
-    <input type="text" id="search-bar" placeholder="Введите название товара..." oninput="filterProducts()">
+    <input type="text" id="search-bar" placeholder="Введите название категории..." oninput="filterCategories()">
 
-    <div class="products" id="products">
-        <div class="product">
-            <a href="airpodspro2anc/airpodsproanc.html">
-                <img src="airpodspro2anc/airpodsproanc.jpg" alt="Airpods Pro 2 ANC">
-                <div class="product-name">Airpods Pro 2 ANC</div>
-                <div class="product-price">$12.5</div>
-            </a>
+    <div class="categories" id="categories">
+        <div class="category">
+            <img src="categories/kici nausniklar/kicinausnik.jpg" alt="Kici Nausniklar">
+            <a href="categories/kici nausniklar/kici nausniklar.html">Kici Nausniklar</a>
         </div>
-        <div class="product">
-            <a href="products/product2.html">
-                <img src="images/product2.jpg" alt="Товар 2">
-                <div class="product-name">Товар 2</div>
-                <div class="product-price">700 руб.</div>
-            </a>
+        <div class="category">
+            <img src="categories/uly nausniklar/ulynausnik.jpg" alt="Uly Nausniklar">
+            <a href="category2.html">Uly Nausniklar</a>
         </div>
-        <div class="product">
-            <a href="products/product3.html">
-                <img src="images/product3.jpg" alt="Товар 3">
-                <div class="product-name">Товар 3</div>
-                <div class="product-price">600 руб.</div>
-            </a>
+        <div class="category">
+            <img src="category3.jpg" alt="Simly Nausniklar">
+            <a href="category3.html">Simly Nausniklar</a>
+        </div>
+        <div class="category">
+            <img src="category3.jpg" alt="Категория 3">
+            <a href="category3.html">Категория 3</a>
         </div>
     </div>
 
     <script>
-        function filterProducts() {
+        function filterCategories() {
             const query = document.getElementById('search-bar').value.toLowerCase();
-            const products = document.querySelectorAll('.product');
+            const categories = document.querySelectorAll('.category');
 
-            products.forEach(product => {
-                const productName = product.querySelector('.product-name').textContent.toLowerCase();
-                if (productName.includes(query)) {
-                    product.style.display = 'block';
+            categories.forEach(category => {
+                const categoryName = category.querySelector('a').textContent.toLowerCase();
+                if (categoryName.includes(query)) {
+                    category.style.display = 'block';
                 } else {
-                    product.style.display = 'none';
+                    category.style.display = 'none';
                 }
             });
         }
