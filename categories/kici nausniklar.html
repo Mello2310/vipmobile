@@ -8,121 +8,86 @@
     <style>
         body {
             font-family: Helvetica, sans-serif;
-            margin: 0;
+            margin: 10px;
             padding: 0;
-        }
-
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 20px;
+            box-sizing: border-box;
         }
 
         h1 {
             text-align: center;
-            margin-bottom: 30px;
+            font-size: 24px;
+            margin-bottom: 20px;
         }
 
         .products {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 20px;
-            margin-top: 20px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 10px;
         }
 
         .product {
             text-align: center;
-            border: 1px solid #ccc;
-            padding: 20px;
-            border-radius: 5px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s ease;
-        }
-
-        .product:hover {
-            transform: translateY(-10px);
+            border: 1px solid #ddd;
+            padding: 10px;
+            width: 100%;
+            max-width: 200px;
+            box-sizing: border-box;
         }
 
         .product img {
             max-width: 100%;
             height: auto;
-            border-radius: 5px;
+            border-radius: 8px;
         }
 
         .product-name {
-            font-size: 1.2em;
+            font-size: 16px;
             margin-top: 10px;
         }
 
         .product-price {
-            font-size: 1.1em;
+            font-size: 14px;
             color: green;
             margin-top: 5px;
         }
 
-        @media screen and (max-width: 768px) {
-            .products {
-                grid-template-columns: repeat(2, 1fr);
+        /* Adjustments for smaller screens */
+        @media (max-width: 600px) {
+            .product {
+                max-width: 150px;
             }
-        }
-
-        @media screen and (max-width: 480px) {
-            .products {
-                grid-template-columns: 1fr;
+            h1 {
+                font-size: 20px;
             }
         }
     </style>
 </head>
 <body>
+    <h1>Kici Nausniklar</h1>
 
-    <div class="container">
-        <h1>Kici Nausniklar</h1>
-
-        <div class="products">
-            <div class="product">
-                <a href="../products/airpodsproanc.html">
-                    <img src="../images/airpodsproanc.jpg">
-                    <div class="product-name">Airpods Pro 2 ANC</div>
-                    <div class="product-price">$12.5</div>
-                </a>
-            </div>
-            <div class="product">
-                <a href="product2.html">
-                    <img src="images/product2.jpg">
-                    <div class="product-name">Товар 2</div>
-                    <div class="product-price">700 руб.</div>
-                </a>
-            </div>
-            <div class="product">
-                <a href="product3.html">
-                    <img src="images/product3.jpg" alt="Товар 3">
-                    <div class="product-name">Товар 3</div>
-                    <div class="product-price">600 руб.</div>
-                </a>
-            </div>
-            <div class="product">
-                <a href="product4.html">
-                    <img src="images/product4.jpg" alt="Товар 4">
-                    <div class="product-name">Товар 4</div>
-                    <div class="product-price">550 руб.</div>
-                </a>
-            </div>
-            <div class="product">
-                <a href="product5.html">
-                    <img src="images/product5.jpg" alt="Товар 5">
-                    <div class="product-name">Товар 5</div>
-                    <div class="product-price">750 руб.</div>
-                </a>
-            </div>
-            <div class="product">
-                <a href="product6.html">
-                    <img src="images/product6.jpg" alt="Товар 6">
-                    <div class="product-name">Товар 6</div>
-                    <div class="product-price">800 руб.</div>
-                </a>
-            </div>
+    <div class="products">
+        <div class="product">
+            <a href="../products/airpodsproanc.html">
+                <img src="../images/airpodsproanc.jpg" alt="Airpods Pro 2 ANC">
+                <div class="product-name">Airpods Pro 2 ANC</div>
+                <div class="product-price">$12.5</div>
+            </a>
+        </div>
+        <div class="product">
+            <a href="products/product2.html">
+                <img src="images/product2.jpg" alt="Товар 2">
+                <div class="product-name">Товар 2</div>
+                <div class="product-price">700 руб.</div>
+            </a>
+        </div>
+        <div class="product">
+            <a href="products/product3.html">
+                <img src="images/product3.jpg" alt="Товар 3">
+                <div class="product-name">Товар 3</div>
+                <div class="product-price">600 руб.</div>
+            </a>
         </div>
     </div>
-
 </body>
 </html>
