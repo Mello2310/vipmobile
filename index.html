@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VIP MOBILE</title>
+    <style>
+        body {
+            font-family: Helvetica, sans-serif;
+            margin: 10px;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        h1 {
+            text-align: center;
+            font-size: 24px;
+        }
+        .categories {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 10px;
+            margin-top: 20px;
+        }
+        .category {
+            text-align: center;
+            border: 1px solid #ddd;
+            padding: 10px;
+            width: 100%;
+            max-width: 200px;
+            box-sizing: border-box;
+        }
+        .category img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+        }
+        .category a {
+            text-decoration: none;
+            color: blue;
+            font-size: 14px;
+            font-weight: bold;
+            display: block;
+            margin-top: 10px;
+        }
+        /* Adjustments for mobile screens */
+        @media (max-width: 600px) {
+            h1 {
+                font-size: 20px;
+            }
+            .category {
+                width: 100%;
+                max-width: 150px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>VIP MOBILE</h1>
+    <div class="categories">
+        <div class="category">
+            <img src="categories/kici nausniklar/kicinausnik.jpg" alt="Kici Nausniklar">
+            <a href="categories/kici nausniklar/kici nausniklar.html">Kici Nausniklar</a>
+        </div>
+        <div class="category">
+            <img src="categories/uly nausniklar/ulynausnik.jpg" alt="Uly Nausniklar">
+            <a href="category2.html">Uly Nausniklar</a>
+        </div>
+        <div class="category">
+            <img src="category3.jpg" alt="Simly Nausniklar">
+            <a href="category3.html">Категория 3</a>
+        </div>
+		<div class="category">
+            <img src="category3.jpg" alt="Категория 3">
+            <a href="category3.html">Категория 3</a>
+    </div>
+</body>
+</html>

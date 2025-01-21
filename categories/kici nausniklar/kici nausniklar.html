@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Товары</title>
+
+    <style>
+        body {
+            font-family: Helvetica, sans-serif;
+            margin: 10px;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        h1 {
+            text-align: center;
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+
+        .products {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 10px;
+        }
+
+        .product {
+            text-align: center;
+            border: 1px solid #ddd;
+            padding: 10px;
+            width: 100%;
+            max-width: 200px;
+            box-sizing: border-box;
+        }
+
+        .product img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+        }
+
+        .product-name {
+            font-size: 16px;
+            margin-top: 10px;
+        }
+
+        .product-price {
+            font-size: 14px;
+            color: green;
+            margin-top: 5px;
+        }
+
+        /* Adjustments for smaller screens */
+        @media (max-width: 600px) {
+            .product {
+                max-width: 150px;
+            }
+            h1 {
+                font-size: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>Kici Nausniklar</h1>
+
+    <div class="products">
+        <div class="product">
+            <a href="airpodspro2anc/airpodsproanc.html">
+                <img src="airpodspro2anc/airpodsproanc.jpg" alt="Airpods Pro 2 ANC">
+                <div class="product-name">Airpods Pro 2 ANC</div>
+                <div class="product-price">$12.5</div>
+            </a>
+        </div>
+        <div class="product">
+            <a href="products/product2.html">
+                <img src="images/product2.jpg" alt="Товар 2">
+                <div class="product-name">Товар 2</div>
+                <div class="product-price">700 руб.</div>
+            </a>
+        </div>
+        <div class="product">
+            <a href="products/product3.html">
+                <img src="images/product3.jpg" alt="Товар 3">
+                <div class="product-name">Товар 3</div>
+                <div class="product-price">600 руб.</div>
+            </a>
+        </div>
+    </div>
+</body>
+</html>
