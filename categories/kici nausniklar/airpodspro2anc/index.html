@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Airpods Pro 2 ANC</title>
+    <style>
+        body {
+            font-family: Helvetica, sans-serif;
+            margin: 10px;
+            padding: 0;
+            box-sizing: border-box;
+            background-color: #f4f4f9; /* Добавил светлый фон */
+        }
+
+        h1 {
+            font-size: 26px;
+            margin-bottom: 10px;
+            text-align: center;
+            color: #333; /* Темный цвет текста */
+        }
+
+        .price {
+            font-size: 22px;
+            color: green;
+            text-align: center;
+            margin-bottom: 10px;
+        }
+
+        .description {
+            font-size: 16px;
+            line-height: 1.5;
+            margin-bottom: 20px;
+            text-align: justify;
+            color: #555; /* Более мягкий цвет текста */
+        }
+
+        .description p {
+            margin-bottom: 10px; /* Расстояние между пунктами */
+        }
+
+        /* Главное изображение */
+        .main-image {
+            width: 80%;
+            height: auto;
+            max-width: 400px;
+            margin: 20px auto;
+            display: block;
+            border-radius: 12px; /* Скругленные углы */
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease; /* Эффект при наведении */
+        }
+
+        .main-image:hover {
+            transform: scale(1.05); /* Увеличение изображения при наведении */
+        }
+
+        /* Контейнер для изображений */
+        .images {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 10px;
+            margin-top: 20px;
+        }
+
+        /* Дополнительные изображения */
+        .images img {
+            width: 100%;
+            height: auto;
+            border-radius: 12px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .images img:hover {
+            transform: scale(1.05); /* Увеличение изображения при наведении */
+        }
+
+        /* Адаптация для мобильных устройств */
+        @media (max-width: 600px) {
+            .images {
+                grid-template-columns: 1fr; /* 1 изображение в ряд на мобильных устройствах */
+            }
+
+            .main-image {
+                width: 100%;
+            }
+
+            h1 {
+                font-size: 22px;
+            }
+
+            .price {
+                font-size: 18px;
+            }
+        }
+
+        footer {
+            margin-top: 20px;
+            text-align: center;
+            font-size: 14px;
+            color: #666;
+        }
+    </style>
+</head>
+<body>
+    <h1>Airpods Pro 2 ANC</h1>
+    <div class="price">$12.5</div>
+    <div class="description">
+        <p>Airpods Pro 2 ANC (Active Noise Cancelation)</p>
+        <p>✓ Ähli telefonlara, kompýuterlara, we telewizora çatylýar</p>
+        <p>✓ "Шумоподавление" işleýär</p>
+        <p>✓ Type-C USB</p>
+        <p>✓ Sensordan sesi gataldyp-peseldip bolýar</p>
+        <p>✓ Ýokary hilli sesi we bass çykyşy</p>
+    </div>
+
+    <!-- Дополнительные изображения -->
+    <div class="images">
+        <img src="image1.jpg" alt="Дополнительное изображение 1">
+        <img src="image2.jpg" alt="Дополнительное изображение 2">
+        <img src="image3.jpg" alt="Дополнительное изображение 3">
+        <img src="image4.jpg" alt="Дополнительное изображение 4">
+    </div>
+
+    <footer>
+        <p>VIP MOBILE</p>
+    </footer>
+</body>
+</html>

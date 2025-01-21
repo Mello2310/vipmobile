@@ -93,34 +93,51 @@
     </style>
 </head>
 <body>
-    <h1>Kici Nausniklar</h1>
+    <h1>Kiçi Nauşniklar</h1>
 
     <div class="search-bar">
-        <input type="text" placeholder="Поиск товаров...">
+        <input type="text" id="search" placeholder="Поиск товаров..." oninput="filterProducts()">
     </div>
 
-    <div class="products">
+    <div class="products" id="product-list">
         <div class="product">
-            <a href="airpodspro2anc/airpodsproanc.html">
-                <img src="airpodspro2anc/airpodsproanc.jpg" alt="Airpods Pro 2 ANC">
+            <a href="airpodspro2anc/index.html">
+                <img src="airpodspro2anc/image1.jpg" alt="Airpods Pro 2 ANC">
                 <div class="product-name">Airpods Pro 2 ANC</div>
                 <div class="product-price">$12.5</div>
             </a>
         </div>
         <div class="product">
-            <a href="products/product2.html">
-                <img src="images/product2.jpg" alt="Товар 2">
-                <div class="product-name">Товар 2</div>
-                <div class="product-price">700 руб.</div>
+            <a href="airpodspro2/index.html">
+                <img src="airpodspro2/image1.jpg" alt="Airpods Pro 2">
+                <div class="product-name">Airpods Pro 2</div>
+                <div class="product-price">$5</div>
             </a>
         </div>
         <div class="product">
-            <a href="products/product3.html">
-                <img src="images/product3.jpg" alt="Товар 3">
-                <div class="product-name">Товар 3</div>
-                <div class="product-price">600 руб.</div>
+            <a href="/index.html">
+                <img src="/image1.jpg" alt="name">
+                <div class="product-name">name</div>
+                <div class="product-price">$</div>
             </a>
         </div>
+        <!-- Дополнительные товары -->
     </div>
+
+    <script>
+        function filterProducts() {
+            const query = document.getElementById('search').value.toLowerCase();
+            const products = document.querySelectorAll('.product');
+            
+            products.forEach(product => {
+                const productName = product.querySelector('.product-name').textContent.toLowerCase();
+                if (productName.includes(query)) {
+                    product.style.display = 'block';
+                } else {
+                    product.style.display = 'none';
+                }
+            });
+        }
+    </script>
 </body>
 </html>
