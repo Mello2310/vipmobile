@@ -1,2 +1,0 @@
-# vipmobile
-Catalog
