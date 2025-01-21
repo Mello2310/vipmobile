@@ -32,12 +32,24 @@
             text-align: justify;
         }
 
+        /* Главное изображение */
+        .main-image {
+            width: 80%;
+            height: auto;
+            max-width: 400px; /* Ограничиваем максимальную ширину */
+            margin: 20px auto;
+            display: block;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
         .images {
             display: flex;
             flex-direction: column;
             gap: 10px;
         }
 
+        /* Дополнительные изображения */
         .images img {
             width: 100%;
             height: auto;
@@ -57,15 +69,21 @@
     <h1>Airpods Pro 2 ANC</h1>
     <div class="price">$12.5</div>
     <div class="description">
-        Airpods Pro 2 ANC — это инновационные наушники с активным шумоподавлением, обеспечивающие кристально чистый звук. Они легкие, удобные и идеально подходят для повседневного использования. Наслаждайтесь музыкой, подкастами и звонками в высоком качестве.
+        Airpods Pro 2 — это наушники с активным шумоподавлением, созданные для того, чтобы погрузить вас в мир качественного звука. Эти наушники оснащены передовыми функциями, такими как адаптивное шумоподавление, режим прозрачности и улучшенная автономность. Идеальный выбор для тех, кто ценит комфорт и высокое качество звука.
     </div>
+
+    <!-- Главное изображение -->
+    <img src="images/airpodsproanc.jpg" alt="Airpods Pro 2 ANC" class="main-image">
+
+    <!-- Дополнительные изображения -->
     <div class="images">
-        <img src="../images/airpodsproanc.jpg" alt="Airpods Pro 2 ANC Main">
-        <img src="../images/airpods_side.jpg" alt="Airpods Side View">
-        <img src="../images/airpods_case.jpg" alt="Airpods with Case">
+        <img src="images/airpodsproanc_1.jpg" alt="Дополнительное изображение 1">
+        <img src="images/airpodsproanc_2.jpg" alt="Дополнительное изображение 2">
+        <img src="images/airpodsproanc_3.jpg" alt="Дополнительное изображение 3">
     </div>
+
     <footer>
-        &copy; 2025 VIP MOBILE. Все права защищены.
+        <p>VIP MOBILE | Все права защищены</p>
     </footer>
 </body>
 </html>
