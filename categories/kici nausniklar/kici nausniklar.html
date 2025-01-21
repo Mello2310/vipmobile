@@ -19,6 +19,17 @@
             margin-bottom: 20px;
         }
 
+        #search-bar {
+            display: block;
+            margin: 10px auto;
+            padding: 10px;
+            width: 100%;
+            max-width: 300px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
         .products {
             display: flex;
             flex-wrap: wrap;
@@ -66,7 +77,10 @@
 <body>
     <h1>Kici Nausniklar</h1>
 
-    <div class="products">
+    <!-- Search Bar -->
+    <input type="text" id="search-bar" placeholder="Введите название товара..." oninput="filterProducts()">
+
+    <div class="products" id="products">
         <div class="product">
             <a href="airpodspro2anc/airpodsproanc.html">
                 <img src="airpodspro2anc/airpodsproanc.jpg" alt="Airpods Pro 2 ANC">
@@ -89,5 +103,21 @@
             </a>
         </div>
     </div>
+
+    <script>
+        function filterProducts() {
+            const query = document.getElementById('search-bar').value.toLowerCase();
+            const products = document.querySelectorAll('.product');
+
+            products.forEach(product => {
+                const productName = product.querySelector('.product-name').textContent.toLowerCase();
+                if (productName.includes(query)) {
+                    product.style.display = 'block';
+                } else {
+                    product.style.display = 'none';
+                }
+            });
+        }
+    </script>
 </body>
 </html>
