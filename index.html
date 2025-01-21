@@ -27,7 +27,7 @@
             border: 1px solid #ddd;
             padding: 10px;
             width: 100%;
-            max-width: 200px;
+            max-width: 120px; /* Регулируем ширину */
             box-sizing: border-box;
         }
         .category img {
@@ -43,14 +43,11 @@
             display: block;
             margin-top: 10px;
         }
-        /* Adjustments for mobile screens */
+        /* Mobile view for 3 items per row */
         @media (max-width: 600px) {
-            h1 {
-                font-size: 20px;
-            }
             .category {
-                width: 100%;
-                max-width: 150px;
+                flex: 1 1 calc(33.33% - 10px); /* 3 в ряд */
+                max-width: calc(33.33% - 10px);
             }
         }
     </style>
@@ -70,9 +67,10 @@
             <img src="category3.jpg" alt="Simly Nausniklar">
             <a href="category3.html">Категория 3</a>
         </div>
-		<div class="category">
+        <div class="category">
             <img src="category3.jpg" alt="Категория 3">
             <a href="category3.html">Категория 3</a>
+        </div>
     </div>
 </body>
 </html>
